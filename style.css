@@ -24,6 +24,11 @@ Branco           #F0F1F1 */
     font-family: kanzalea;
 }
 
+.fundo {
+    background-image: url(img/yama.png);
+    background-attachment: fixed;
+}
+
 h1{
     font-family: kanzalea;
     font-weight: bold;
@@ -31,12 +36,18 @@ h1{
     text-shadow: 3px 3px rgb(216, 215, 215);
 }
 
+p{
+    font-family: 'Signika', sans-serif;
+}
+
+.textoBranco{
+    color: #F0F1F1;
+}
+
 body{
     padding-top: 60px;
     margin: 0;
 }
-
-
 
 .azul {
     background-color: #D20528;
