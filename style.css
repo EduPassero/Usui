@@ -34,7 +34,6 @@ h1{
 body{
     padding-top: 60px;
     margin: 0;
-    background-color: white;
 }
 
 
@@ -73,5 +72,10 @@ body{
 
 .depo {
     border-radius: 60%;
-    height: 200px;
-  }
+    height:150px;
+}
+
+/*================================================================== IMC*/
+.quadroResposta{
+    background-color:#F0F1F1; border-radius: 10px;
+}
