@@ -9,15 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
     <title>Usui</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script>
@@ -35,57 +26,86 @@
 </head>
 
 <header>
-    <nav class="navbar navbar-expand-lg preto" id="navbar">
-        <a class="navbar-brand textoBranco kanzalea" href="#">USUI</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md fixed-top text-right preto" id="navbar">
+
+        <a href="#" class="navbar-brand">
+            <img src="img/usui.png" style="height:50px; vertical-align: middle" alt="Logo">
+        </a>
+
+        <button class="navbar-toggler text-right" data-toggle="collapse" data-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="textoBranco" href="#">Serviços</a>
-                    <a class="textoBranco" href="#">Depoimentos</a>
-                    <a class="textoBranco" href="#">Contato</a>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="#/" class="nav-link text-white vantagens conteudoB">Serviços</a></li>
+                <li class="nav-item"><a href="#/" class="nav-link text-white funcionalidades conteudoB">Depoimentos</a>
                 </li>
+                <li class="nav-item"><a href="#/" class="nav-link text-white planos conteudoB">Contato</a></li>
             </ul>
         </div>
+
     </nav>
 </header>
 
-<body>
+<body style="padding-top:100px">
+    <div class="container mb-5">
+        <h2 class="text-center ">Pilates Usui</h2>
+        <p>ALivie as tensões do seu dia, conheça pessoas diferentes e cuide de seu corpo em estúdios modernos e com
+            equipamentos de qualidade.
+            Nossos instrutores são certificados, experientes e sempre prontos para te ajudar.
+        </p>
+    </div>
     <section>
-        <div class="row">
+        <div class="row mb-4 col-md-10 offset-md-1">
             <div class="col-md-4">
-                <img src="img/pilates_class.jpg">
+                <img class="img-thumbnail" src="img/pilates_class.jpg"><br><br>
             </div>
             <div class="col-md-4">
-                <img src="img/pilates_class.jpg">
+                <img class="img-thumbnail" src="img/pilates_team.jpg"><br><br>
             </div>
             <div class="col-md-4">
-                <img src="img/pilates_class.jpg">
+                <img class="img-thumbnail" src="img/pilates_classes.jpg"><br><br>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row mb-4 col-md-10 offset-md-1">
             <div class="col-md-4">
-                <img class="img-thumbnail" src="img/pilates_turma.jpg">
+                <img class="img-thumbnail" src="img/pilates_yoga.jpg"><br><br>
             </div>
             <div class="col-md-4">
-                <img src="img/pilates_turma.jpg">
+                <img class="img-thumbnail" src="img/pilates_studio.jpg"><br><br>
             </div>
             <div class="col-md-4">
-                <img src="img/pilates_turma.jpg">
+                <img class="img-thumbnail" src="img/pilates_turma.jpg"><br><br>
             </div>
         </div>
     </section>
-    <footer class="preto textoBranco text-center">
-        <p>Todos os direitos reservados</p>
-        <p>Todos os direitos reservados</p>
-        <p>Todos os direitos reservados</p>
-        <p>Todos os direitos reservados</p>
+    <footer class="footer">
+        <div class="row">
+            <div class="col">
+                <p>Desenvolvido por Tchê Sites &copy; 2019</p>
+            </div>
+            <div class="col">
+                <img src="img/usui.png" style="height: 100px">
+            </div>
+            <div class="col text-left">
+                <p>Rua Akihabara, 788, Liberdade - SP</p>
+                <p>usui@usuiestudio.com</p>
+                <p>(11) 7777 7777</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

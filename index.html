@@ -3,21 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Usui</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script>
@@ -35,41 +28,33 @@
 </head>
 
 <header>
-    <nav class="navbar navbar-expand-lg preto" id="navbar">
-        <a class="navbar-brand textoBranco kanzalea" href="#">USUI</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md fixed-top text-right preto" id="navbar">
+        <a href="#" class="navbar-brand">
+            <img src="img/usui.png" style="height:50px; vertical-align: middle" alt="Logo">
+        </a>
+        <button class="navbar-toggler text-right" data-toggle="collapse" data-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="textoBranco" href="#">Serviços</a>
-                        <a class="textoBranco" href="#">Depoimentos</a>
-                        <a class="textoBranco" href="#">Contato</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="#servicos" class="nav-link text-white vantagens conteudoB">Serviços</a>
+                </li>
+                <li class="nav-item"><a href="#depoimentos"
+                        class="nav-link text-white funcionalidades conteudoB">Depoimentos</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link text-white planos conteudoB">Contato</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
 
 <body>
     <section class="hero is-large fundo">
         <div class="text-center hero-body">
-            <img src="img/usui.png" style="height:150px">
-            <h2 class="textoBranco">A mais famosa clínica de emagrecimento do Japão</h2>
-        </div>
-        <div class="container fundo text-center">
-            <!-- <h2 class="text-center">Equilibre seu corpo e sua mente</h2>
-            <p>Resultados duradouros, métodos seguros, vidas restauradas.<br>
-                Em 1980 nascia a <span style="color:#D20528">Usui</span>, a clínica
-                de emagrecimento mais tradicional do Japão.<br> Agora no Brasil, ela promete
-                trazer saúde e equilíbrio para aqueles que buscam o corpo perfeito.
-            </p> -->
+            <img class="mb-5" src="img/usui.png" style="height:150px">
+            <h2 class="textoBranco">A mais famosa clínica de emagrecimento do Japão agora no Brasil</h2>
         </div>
     </section>
-    <div class="container mt-5">
+    <div class="container mt-5" id="servicos">
         <div class="card-deck">
             <div class="card shadow">
                 <img src="img/imc.jpg" class="card-img-top" alt="...">
@@ -84,7 +69,9 @@
             <div class="card shadow">
                 <img src="img/pilates.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Pilates</h5>
+                    <a href="pilates.html" style="text-decoration: none">
+                        <h5 class="card-title">Pilates</h5>
+                    </a>
                     <p class="card-text">Temos o mais completo estúdio de Pilates com os melhores equipamentos,
                         instrutores
                         certificados, e treinos que se adequam à sua rotina.
@@ -95,7 +82,9 @@
             <div class="card shadow">
                 <img src="img/detox.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Detox</h5>
+                    <a href="pilates.html" style="text-decoration: none" href="detox.html">
+                        <h5 class="card-title">Detox</h5>
+                    </a>
                     <p class="card-text">Alimente-se bem, elimine as substâncias prejudiciais ao seu corpo. Com os sucos
                         Detox Usui
                         seu processo de emagrecimento é potencializado!
@@ -106,24 +95,24 @@
         </div>
     </div><br><br><br><br><br><br>
     <!-- ==================================================================================================================== -->
-    <section class="container mt-5 mb-4">
+    <section class="container mt-5 mb-4" id="depoimentos">
         <div class="row text-center">
             <div class="col-md-4 col-sm-12 mb-3">
-                <img class="depo shadow" src="img/depo1.jpg">
+                <img class="depo shadow mb-2" src="img/depo1.jpg">
                 <h3>Yoko Gozetsuke</h3>
                 <p>"Nunca convivi bem com meu corpo, sempre me achava acima do peso.
                     Através da Usui consegui reconquistar minha auto estima, hoje me considero uma nova Yoko!"
                 </p>
             </div>
             <div class="col-md-4 col-sm-12 mb-3">
-                <img class="depo shadow" src="img/depo2.jpg">
+                <img class="depo shadow mb-2" src="img/depo2.jpg">
                 <h3>Kurisu Sai</h3>
                 <p>"Inicialmente não confiei 100% nas promessas da Usui. Já havia tentado diversos métodos
                     e nenhum funcionou. Mas depois das primeiras semanas com os métodos da Usui, já vi bons resultados"
                 </p>
             </div>
             <div class="col-md-4 col-sm-12 mb-3">
-                <img class="depo shadow" src="img/depo3.jpg">
+                <img class="depo shadow mb-2" src="img/depo3.jpg">
                 <h3>Taeko Ohnuki</h3>
                 <p>Perder peso não é fácil. Mas os métodos da Usui
                     facilitam bastante. Hoje me sinto bem comigo mesma e sempre saio das sessões de Pilates
@@ -131,41 +120,63 @@
                 </p>
             </div>
         </div>
-    </section><br><br><br><br><br><br>
+    </section><br><br><br><br>
     <section class="container mt-5">
         <div class="text-center mb-4">
             <h2>Fale com a Usui</h2>
             <p>Envie sua mensagem, você pode nos contar seu objetivo, fazer perguntas e se informar sobre nossos
                 horários disponíveis</p>
         </div>
-        <div class="jumbotron col-md-6 offset-md-3">
+        <div class="jumbotron col-md-6 offset-md-3" id="contato">
             <form>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nome</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1">
+                    <input type="text" class="form-control" id="nome" onblur="validaNome()">
+                    <small><span class="helper-text mb-1" id="avisoNome"></span></small><br>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1">
+                    <input type="email" class="form-control" id="email" onblur="validaEmail()">
+                    <small><span class="helper-text mb-1" id="avisoEmail"></span></small><br>
                 </div>
                 <div class="form-group">
                     <label>Telefone</label>
-                    <input type="text" class="form-control" id="telefone">
+                    <input type="text" class="form-control" id="telefone" onblur="validaTelefone()">
+                    <small><span class="helper-text mb-1" id="avisoTelefone"></span></small><br>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Sua mensagem</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="mensagem" rows="3" onblur="validaMsg()"></textarea>
+                    <small><span class="helper-text mb-1" id="avisoMsg"></span></small><br>
                 </div>
                 <button type="submit" class="btn btn-primary col-md-12" onclick="validaCampos()">Enviar</button>
             </form>
         </div>
     </section>
-    <footer class="preto textoBranco text-center">
-        <p>Todos os direitos reservados</p>
-        <p>Todos os direitos reservados</p>
-        <p>Todos os direitos reservados</p>
-        <p>Todos os direitos reservados</p>
+    <footer class="footer">
+        <div class="row">
+            <div class="col">
+                <p>Desenvolvido por Tchê Sites &copy; 2019</p>
+            </div>
+            <div class="col">
+                <img src="img/usui.png" style="height: 100px">
+            </div>
+            <div class="col text-left">
+                <p>Rua Akihabara, 788, Liberdade - SP</p>
+                <p>usui@usuiestudio.com</p>
+                <p>(11) 7777 7777</p>
+            </div>
+        </div>
     </footer>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js"></script>
 </html>

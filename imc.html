@@ -8,29 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
     <title>Usui</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-80px";
-            }
-            prevScrollpos = currentScrollPos;
-        } 
-    </script>
     <style>
         .btn {
             background-color: #D20528 !important;
@@ -39,26 +18,26 @@
 </head>
 
 <header>
-    <nav class="navbar navbar-expand-lg preto" id="navbar">
-        <a class="navbar-brand textoBranco kanzalea" href="index.html">SUI</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md fixed-top text-right preto" id="navbar">
+        <a href="index.html" class="navbar-brand">
+            <img src="img/usui.png" style="height:50px; vertical-align: middle" alt="Logo">
+        </a>
+        <button class="navbar-toggler text-right" data-toggle="collapse" data-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="textoBranco" href="#">Serviços</a>
-                        <a class="textoBranco" href="#">Depoimentos</a>
-                        <a class="textoBranco" href="#">Contato</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link text-white vantagens conteudoB">Serviços</a>
+                </li>
+                <li class="nav-item"><a href="index.html"
+                        class="nav-link text-white funcionalidades conteudoB">Depoimentos</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link text-white planos conteudoB">Contato</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
 
-<body>
+<body style="padding-top:100px">
     <section class="container col-md-6 mt-3">
         <h2 class="text-center mb-5">Cálculo de ICMS</h2>
         <h3>Como funciona?</h3>
@@ -67,8 +46,7 @@
             Não se preocupe! Apenas insira suas informações nos campos abaixo e fazemos a mágica!
         </p>
     </section>
-    <section class="container col-md-6 mt-4">
-
+    <section class="container col-md-6 mt-4 mb-5">
         <form class="col-md-4 col-sm-12 offset-md-4">
             <div class="form-group">
                 <label>Seu peso (em kg)</label>
@@ -87,54 +65,33 @@
             <button type="button" class="btn col-md-5 btn-danger mb-2 float-right"
                 onclick="limpaCampos()">Limpar</button>
         </form>
-
     </section>
+    <footer class="footer">
+        <div class="row">
+            <div class="col">
+                <p>Desenvolvido por Tchê Sites &copy; 2019</p>
+            </div>
+            <div class="col">
+                <img src="img/usui.png" style="height: 100px">
+            </div>
+            <div class="col text-left">
+                <p>Rua Akihabara, 788, Liberdade - SP</p>
+                <p>usui@usuiestudio.com</p>
+                <p>(11) 7777 7777</p>
+            </div>
+        </div>
+    </footer>
     <!-- ==================================================================================================================== -->
 </body>
-<script>
-    red = '#D20528';
-    green = '#4ff418';
-    yellow = "#efca08";
-    orange = "#f49f0a";
-    grey = "#b5c9c2";
-
-    function limpaCampos() {
-        document.getElementById("peso").value = "";
-        document.getElementById("altura").value = "";
-        document.getElementById("resultado").value = "";
-        document.getElementById("aviso").innerHTML = "";
-        document.getElementById("resultado").style.borderColor = null;;
-    };
-
-    function calculaImc() {
-        var peso = document.getElementById("peso").value;
-        var altura = document.getElementById("altura").value;
-        altura = altura / 100;
-        var imc = peso / (altura * altura);
-        imc = parseFloat(imc.toFixed(1));
-        document.getElementById("resultado").value = imc;
-        if (imc < 18.5) {
-            document.getElementById("resultado").style.borderColor = red; //magreza
-            document.getElementById("aviso").innerHTML = 'Você está muito magro!'
-            document.getElementById("aviso").style.color = red;
-        } else if (imc >= 18.5 && imc <= 24.9) {
-            document.getElementById("resultado").style.borderColor = green;
-            document.getElementById("aviso").innerHTML = 'Tudo certo com você!' //normal
-            document.getElementById("aviso").style.color = green;
-        } else if (imc >= 25.0 && imc <= 29.9) {
-            document.getElementById("resultado").style.borderColor = yellow; //sobrepeso I
-            document.getElementById("aviso").innerHTML = 'Você está acima do peso!'
-            document.getElementById("aviso").style.color = yellow;
-        } else if (imc >= 30.0 && imc <= 39.0) {
-            document.getElementById("resultado").style.borderColor = orange; //obesidade II
-            document.getElementById("aviso").innerHTML = 'Feche a boca! Coma menos!'
-            document.getElementById("aviso").style.color = orange;
-        } else if (imc >= 40.0) {
-            document.getElementById("resultado").style.borderColor = red; //obesidade grave III
-            document.getElementById("aviso").innerHTML = 'Já encomenda o caixão de aço!'
-            document.getElementById("aviso").style.color = red;
-        }
-    }
-</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js"></script>
 
 </html>
